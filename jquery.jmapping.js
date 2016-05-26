@@ -209,7 +209,7 @@
           settings.link_selector
         ].join(' ');
         
-        $(location_link_selector).live('click', function(e){
+        $(location_link_selector).on('click', function(e){
           e.preventDefault();
           var marker_index = parseInt($(this).attr('href').split('#')[1], 10);
           google.maps.event.trigger(gmarkers[marker_index], "click");
